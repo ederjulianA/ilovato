@@ -20,6 +20,14 @@ use App\Models\Article;
 	    	return $a;
 	    }
 
+	    public function newArticle($filename)
+	    {
+	    	$article = new Article();
+	    	$article->img = '/blog/img/'.$filename;
+			$article->active = 1;
+			return $article;
+	    }
+
 
 	    public function getArticlesUser($user_id)
 	    {

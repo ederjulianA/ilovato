@@ -32,8 +32,8 @@
 
 								<div class="form-group">
 									{{ Form::label('category','Select the category') }}
-									{{ Form::select('category', $categories,['class'=>'form-control']) }}
-									{{ $errors->first('category','<p class="alert alert-danger">:message</p>') }}
+									{{ Form::select('category_id', $categories,['class'=>'form-control']) }}
+									{{ $errors->first('category_id','<p class="alert alert-danger">:message</p>') }}
 								</div>
 
 								<div class="form-group">
@@ -47,6 +47,7 @@
 								<div class="form-group">
 									{{ Form::label('img',' Articles image') }}
 									{{ Form::file('img', array('class' => 'form-control')) }}
+									{{ Form::hidden('user_id', Auth::user()->id)}}
 									{{ $errors->first('img','<p class="alert alert-danger">:message</p>') }}
 								</div>
 

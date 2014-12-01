@@ -3,6 +3,8 @@
 	class Article extends \Eloquent {
 		protected $table = 'articles';
 
+		protected $fillable = array('title', 'slug','teaser','category_id','user_id', 'content','meta_description');
+
 		public function user()
 		{
 			return $this->belongsTo('User');
