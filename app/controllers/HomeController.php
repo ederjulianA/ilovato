@@ -46,6 +46,12 @@ class HomeController extends BaseController {
 
 	}
 
+	public function areumissd()
+	{
+		 
+		return View::make('missd.index');
+	}
+
 
 	public function getAddres($id)
 	{

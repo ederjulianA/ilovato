@@ -42,6 +42,11 @@ Route::get('/article/{id}-{slug}', array(
 		'uses' => 'HomeController@getArticle'
 	));
 
+Route::get('/areumissd', array(
+		'as' => 'areumissd',
+		'uses' => 'HomeController@areumissd'
+	));
+
 //*******************************ROUTE SITE MAP"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Route::get('/sidemap', array(
 		'as' => 'sidemap',
