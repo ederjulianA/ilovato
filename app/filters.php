@@ -22,6 +22,10 @@ App::after(function($request, $response)
 	//
 });
 
+Route::filter('allowOrigin', function($route, $request, $response) 
+{
+    $response->header('access-control-allow-origin','*');
+});
 /*
 |--------------------------------------------------------------------------
 | Authentication Filters

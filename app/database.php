@@ -52,23 +52,34 @@ return array(
 			'prefix'   => '',
 		),
 
+
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'blog2',
+			'database'  => 'megalopolis',
 			'username'  => 'root',
-			//'password'  => 'linux4EVER',
-			'password'  => '',
+			'password'  => 'eder4EVER',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
 		),
 
+		/*'mysql' => array(
+			'driver'    => 'mysql',
+			'host'      => 'localhost',
+			'database'  => 'tumegalo_datos',
+			'username'  => 'tumegalo_eder',
+			'password'  => 'eder4EVER',
+			'charset'   => 'utf8',
+			'collation' => 'utf8_unicode_ci',
+			'prefix'    => '',
+		),*/
+
 		'pgsql' => array(
 			'driver'   => 'pgsql',
 			'host'     => 'localhost',
-			'database' => 'forge',
-			'username' => 'forge',
+			'database' => 'database',
+			'username' => 'root',
 			'password' => '',
 			'charset'  => 'utf8',
 			'prefix'   => '',

@@ -12,4 +12,9 @@ use App\Models\Category;
 	    	return Category::lists('cat_name', 'id');
 	    }
 
+	    public function all()
+	    {
+	    	return Category::all();
+	    }
+
 	}

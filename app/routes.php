@@ -10,6 +10,18 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
+	Route::group(array('domain' => 'store.ilovato.co'), function()
+{
+	Route::get('/', array(
+		'as' => 'homeStore',
+		'uses' => 'StoreController@getHome'
+	));	
+
+});
+
+
+
+
 Route::group(['before' => 'guest'], function() {
 
 
@@ -63,4 +75,25 @@ Route::post('/add/address', array(
 		'as' => 'addAddress',
 		'uses' => 'HomeController@postAddres'
 	));
+
+
+//API ROUTES 
+require (__DIR__ . '/routes/api.php');
+
+
+//prubes
+Route::get('/angular', array(
+		'as' => 'angular',
+		'uses' => 'AngularController@getIndex'
+	));
+
+Route::get('/newcat', array(
+		'as' => 'newCat',
+		'uses' => 'AngularController@getNewCat'
+	));
+
+  Route::post('/newcatpost', array(
+			'as' => 'apinewCat',
+			'uses' => 'ApiController@newCat'
+		));
 
